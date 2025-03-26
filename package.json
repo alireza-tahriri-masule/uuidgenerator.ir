@@ -5,7 +5,8 @@
     "uuid": "^11.1.0"
   },
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "minify": "npx @tailwindcss/cli -i ./src/input.css -o ./src/minify.css --minify"
   },
   "devDependencies": {
     "webpack": "^5.98.0",
