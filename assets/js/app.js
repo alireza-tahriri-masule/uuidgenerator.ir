@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v1 as uuidv1 } from 'uuid';
 
 (() => {
   "use strict";
@@ -25,7 +25,7 @@ import { v4 as uuidv4 } from 'uuid';
   ].map((selector) => document.querySelector(selector));
 
   // Display a single UUID on load
-  displayField && (displayField.innerText = uuidv4());
+  displayField && (displayField.innerText = uuidv1());
 
   // Generate UUIDs
   generateBtn &&
@@ -41,7 +41,7 @@ import { v4 as uuidv4 } from 'uuid';
       const count = +countInput?.value || 1;
       for (let i = 0; i < count; i++) {
         const li = document.createElement("li");
-        li.textContent = uuidv4();
+        li.textContent = uuidv1();
         listContainer.appendChild(li);
       }
     });
