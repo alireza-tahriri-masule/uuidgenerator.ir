@@ -1,5 +1,7 @@
 # 🧬 UUID Generator
 
+<img width="1680" alt="Screenshot 2025-04-15 at 1 34 46 PM" src="https://github.com/user-attachments/assets/f9fee131-9bf4-4d6b-b47d-698ade9b234f" />
+
 A simple and secure web-based UUID generator supporting multiple UUID versions.  
 Generate unique, time-based, namespace-based, or fully random identifiers with ease.
 
