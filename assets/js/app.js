@@ -1,7 +1,17 @@
-import { v1 as uuidv1 } from 'uuid';
+import { v3 as uuidv3 } from 'uuid';
+
+const uuid = uuidv3("uuidgenerator.ir", uuidv3.URL);
+console.log(uuid);
+
 
 (() => {
   "use strict";
+
+  const nameInput = "uuidgenerator.ir";
+  const NAMESPACES = {
+    URL: "6ba7b811-9dad-11d1-80b4-00c04fd430c8",
+    DNS: "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  };
 
   // Selectors
   const [
@@ -25,7 +35,7 @@ import { v1 as uuidv1 } from 'uuid';
   ].map((selector) => document.querySelector(selector));
 
   // Display a single UUID on load
-  displayField && (displayField.innerText = uuidv1());
+  displayField && (displayField.innerText = uuidv3(nameInput, NAMESPACES.DNS));
 
   // Generate UUIDs
   generateBtn &&
@@ -41,7 +51,7 @@ import { v1 as uuidv1 } from 'uuid';
       const count = +countInput?.value || 1;
       for (let i = 0; i < count; i++) {
         const li = document.createElement("li");
-        li.textContent = uuidv1();
+        li.textContent = uuidv3(nameInput, NAMESPACES.DNS);
         listContainer.appendChild(li);
       }
     });
